@@ -3,13 +3,11 @@ import './ProfileLayout.css'; // For styling
 
 const ProfileLayout = ({ profile, onEdit }) => {
   const { name, username, major, education, courses, interests, skills, profilePicture } = profile;
-  const [isFollowing, setIsFollowing] = useState(false); // State for follow/unfollow
-  const handleEditClick = () => {
-    onEdit();
-  };
+  const [isEditing, setIsEditing] = useState(false);
 
-  const handleFollowClick = () => {
-    setIsFollowing(!isFollowing); // Toggle follow/unfollow
+  const handleEditClick = () => {
+    setIsEditing(true);
+    onEdit();
   };
 
   return (
@@ -21,9 +19,7 @@ const ProfileLayout = ({ profile, onEdit }) => {
         </div>
         <h1>{name}</h1>
         <p className="username">@{username}</p>
-        <button className="follow-button" onClick={handleFollowClick}>
-          {isFollowing ? 'Unfollow' : 'Follow'}
-        </button>
+        <button className="follow-button">Follow</button>
         <button className="edit-button" onClick={handleEditClick}>Edit Profile</button>
       </div>
 

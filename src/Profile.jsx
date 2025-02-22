@@ -26,13 +26,14 @@ const Profile = ({ onSubmit }) => {
   const [interests, setInterests] = useState('');
   const [education, setEducation] = useState('');
   const [skills, setSkills] = useState('');
-  const [profilePicture, setProfilePicture] = useState(null); 
+  const [profilePicture, setProfilePicture] = useState(null); // State for profile picture
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const profileData = { major, education, courses, interests, skills, profilePicture };
     onSubmit(profileData); // Pass profile data to App.js
   };
+
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -46,33 +47,33 @@ const Profile = ({ onSubmit }) => {
 
   return (
     <div className="profile-container">
-    <h1>Student Profile</h1>
-    <form onSubmit={handleSubmit}>
-      {/* Profile Picture Upload */}
-      <div className="form-group">
-        <label>Profile Picture:</label>
-        <input
-          type="file"
-          accept="image/*"
-          onChange={handleFileChange}
-        />
-        {profilePicture && (
-          <div className="profile-picture-preview">
-            <img src={profilePicture} alt="Profile Preview" />
-          </div>
-        )}
-      </div>
+      <h1>Student Profile</h1>
+      <form onSubmit={handleSubmit}>
+        {/* Profile Picture Upload */}
+        <div className="form-group">
+          <label>Profile Picture:</label>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleFileChange}
+          />
+          {profilePicture && (
+            <div className="profile-picture-preview">
+              <img src={profilePicture} alt="Profile Preview" />
+            </div>
+          )}
+        </div>
 
-      {/* Major */}
-      <div className="form-group">
-        <label>Major:</label>
-        <input
-          type="text"
-          value={major}
-          onChange={(e) => setMajor(e.target.value)}
-          placeholder="Enter your major"
-        />
-      </div>
+        {/* Major */}
+        <div className="form-group">
+          <label>Major:</label>
+          <input
+            type="text"
+            value={major}
+            onChange={(e) => setMajor(e.target.value)}
+            placeholder="Enter your major"
+          />
+        </div>
 
         {/* Education */}
         <div className="form-group">

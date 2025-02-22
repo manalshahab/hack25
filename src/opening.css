@@ -1,0 +1,35 @@
+.opening-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f6e0b5; /* Light background */
+    color: #23486A; /* Text color */
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .logo {
+    width: 440px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 2rem;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #3B6790; /* Button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #4C7B8B; /* Hover color */
+  }

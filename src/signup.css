@@ -1,0 +1,45 @@
+.signup-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f6e0b5; /* Match the opening page background */
+    color: #23486A; /* Text color */
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 300px; /* Set width of form */
+  }
+  
+  input,
+  select {
+    padding: 0.5rem;
+    border: 1px solid #23486A;
+    border-radius: 5px;
+  }
+  
+  .password-strength {
+    height: 10px;
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+  }
+  
+  .strength-bar {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s;
+  }
+  
+  .logo {
+    width: 190px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 2rem;
+  }
+  
